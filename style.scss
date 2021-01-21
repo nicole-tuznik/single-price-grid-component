@@ -12,15 +12,17 @@ $neutral-gray-blue: hsl(218, 22%, 67%);
 
 body {
   font-family: 'Karla', sans-serif;
-  font-size: 1rem;
   line-height: 1.5;
   color: $neutral-gray-blue;
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
   background-color: $neutral-lg-gray;
+}
 
+h5 {
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
 }
 
 .container {
@@ -28,6 +30,7 @@ body {
   border-radius: 5px;
   box-shadow: 8px -2px 12px $neutral-gray-blue;
   overflow: hidden;
+  max-width: 80%;
 }
 
 .join {
@@ -50,18 +53,13 @@ body {
   color: $neutral-lg-gray;
   padding: 2rem 1.5rem;  
 
-  &__heading {
-    font-size: 1rem;
-    margin-bottom: 0.5rem;
-  }
-
   &__price {
     display: flex;
     align-items: center;
   }
 
   &--sm-text {
-    font-size: 0.8rem;
+    font-size: 0.9rem;
     opacity: 70%;
   }
 
@@ -91,17 +89,13 @@ body {
   color: $neutral-lg-gray;
   padding: 2rem 1.5rem;
 
-  &__heading {
-    margin-bottom: 0.5rem;
-  }
-
   li {
     list-style: none;
-    font-size: 0.8rem;
+    font-size: 0.9rem;
   }
 }
 
-@media (min-width: 800px) {
+@media (min-width: 600px) {
   body {
     height: 100vh;
   }
@@ -113,14 +107,15 @@ body {
   .bottom-boxes {
     display: flex;
     flex-direction: row;
-    
   }
 
-  .sub {
-    flex: 1;
-  }
-
+  .sub,
   .why {
     flex: 1;
+    padding: 2rem;
+  }
+
+  .sub__btn {
+    width: 95%;
   }
 }
